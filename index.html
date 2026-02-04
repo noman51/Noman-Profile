@@ -4,19 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Md. Abdullah Al Noman | Portfolio</title>
-  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body class="theme-dark">
+  <!-- Dynamic network background -->
   <canvas id="net"></canvas>
   <div class="top-glow"></div>
 
-  <!-- Header -->
+  <!-- Header (always fixed) -->
   <header class="header shimmer-frame">
     <div class="header-inner">
-
+      <!-- Mobile menu button -->
       <button id="menuBtn" class="icon-btn shimmer-frame menu-btn" aria-label="Open menu" title="Menu">
-        <span class="theme-icon" aria-hidden="true" id="menuIcon"></span>
+        <span id="menuIcon" class="svg-ico" aria-hidden="true"></span>
       </button>
 
       <a class="brand" href="#home">
@@ -24,6 +25,7 @@
         <span class="brand-text">Noman</span>
       </a>
 
+      <!-- Desktop nav -->
       <nav class="nav desktop-nav" aria-label="Primary">
         <a class="nav-link active" href="#home">Home</a>
         <a class="nav-link" href="#about">About</a>
@@ -34,19 +36,21 @@
         <a class="nav-link" href="#contact">Contact Info</a>
       </nav>
 
+      <!-- Theme toggle -->
       <button id="themeToggle" class="icon-btn shimmer-frame" aria-label="Toggle theme" title="Toggle theme">
-        <span id="themeIcon" class="theme-icon" aria-hidden="true"></span>
+        <span id="themeIcon" class="svg-ico" aria-hidden="true"></span>
       </button>
     </div>
   </header>
 
   <!-- Mobile Drawer -->
   <div id="drawerBackdrop" class="drawer-backdrop" aria-hidden="true"></div>
+
   <aside id="drawer" class="drawer shimmer-frame" aria-label="Mobile menu">
     <div class="drawer-head">
       <div class="drawer-title">Menu</div>
       <button id="drawerClose" class="icon-btn shimmer-frame" aria-label="Close menu" title="Close">
-        <span class="theme-icon" aria-hidden="true" id="closeIcon"></span>
+        <span id="closeIcon" class="svg-ico" aria-hidden="true"></span>
       </button>
     </div>
 
@@ -63,18 +67,17 @@
     <div class="drawer-mini shimmer-frame">
       <div class="mini-label">Quick Links</div>
       <div class="social-row">
-        <!-- NOTE: file names must match exactly -->
         <a class="social-btn shimmer-frame" href="https://www.facebook.com/share/1EMQPtMjmU/" target="_blank" rel="noreferrer">
-          <img src="facebook.png?v=1" alt="Facebook"/>
+          <img src="photo/facebook.png" alt="Facebook"/>
         </a>
         <a class="social-btn shimmer-frame" href="https://www.instagram.com/ridoy.noman.5686?igsh=MXYzOWVlZTNnZTh5eA==" target="_blank" rel="noreferrer">
-          <img src="instagram.png?v=1" alt="Instagram"/>
+          <img src="photo/instagram.png" alt="Instagram"/>
         </a>
         <a class="social-btn shimmer-frame" href="https://github.com/noman51" target="_blank" rel="noreferrer">
-          <img src="github.png?v=1" alt="GitHub"/>
+          <img src="photo/github.png" alt="GitHub"/>
         </a>
         <a class="social-btn shimmer-frame" href="https://www.linkedin.com/in/abdullah-al-n-950472137/" target="_blank" rel="noreferrer">
-          <img src="linkedin.png?v=1" alt="LinkedIn"/>
+          <img src="photo/linkedin.png" alt="LinkedIn"/>
         </a>
       </div>
     </div>
@@ -84,11 +87,11 @@
 
     <!-- HOME -->
     <section id="home" class="section">
-      <div class="card shimmer-frame">
+      <div class="card shimmer-frame section-card">
         <div class="home-wrap">
           <div class="avatar-wrap">
-            <!-- NOTE: pic1.jpg must be in same folder as index.html -->
-            <img class="avatar" src="photo/pic1.jpg?v=1" alt="Noman photo"/>
+            <!-- Profile slider images (place in photo/ folder): pic1.jpg pic2.jpg pic3.jpg -->
+            <img class="avatar" id="profileSlider" src="photo/pic1.jpg" alt="Noman photo" />
             <div class="avatar-ring" aria-hidden="true"></div>
           </div>
 
@@ -100,22 +103,22 @@
 
             <div class="social-row">
               <a class="social-btn shimmer-frame" href="https://www.facebook.com/share/1EMQPtMjmU/" target="_blank" rel="noreferrer">
-                <img src="photo/facebook.png?v=1" alt="Facebook"/>
+                <img src="photo/facebook.png" alt="Facebook"/>
               </a>
               <a class="social-btn shimmer-frame" href="https://www.instagram.com/ridoy.noman.5686?igsh=MXYzOWVlZTNnZTh5eA==" target="_blank" rel="noreferrer">
-                <img src="photo/instagram.png?v=1" alt="Instagram"/>
+                <img src="photo/instagram.png" alt="Instagram"/>
               </a>
               <a class="social-btn shimmer-frame" href="mailto:nomanridoy998@gmail.com" target="_blank" rel="noreferrer">
-                <img src="photo/mail.png?v=1" alt="Email"/>
+                <img src="photo/mail.png" alt="Email"/>
               </a>
               <a class="social-btn shimmer-frame" href="https://github.com/noman51" target="_blank" rel="noreferrer">
-                <img src="photo/github.png?v=1" alt="GitHub"/>
+                <img src="photo/github.png" alt="GitHub"/>
               </a>
               <a class="social-btn shimmer-frame" href="https://www.linkedin.com/in/abdullah-al-n-950472137/" target="_blank" rel="noreferrer">
-                <img src="photo/linkedin.png?v=1" alt="LinkedIn"/>
+                <img src="photo/linkedin.png" alt="LinkedIn"/>
               </a>
               <a class="social-btn shimmer-frame" href="https://wa.me/8801832856912" target="_blank" rel="noreferrer">
-                <img src="photo/whatsapp.png?v=1" alt="WhatsApp"/>
+                <img src="photo/whatsapp.png" alt="WhatsApp"/>
               </a>
             </div>
 
@@ -153,14 +156,14 @@
 
     <!-- ABOUT -->
     <section id="about" class="section">
-      <div class="card shimmer-frame">
+      <div class="card shimmer-frame section-card">
         <h2 class="section-title">About</h2>
         <div class="grid-2">
           <div class="box glow-hover">
             <h3 class="box-title">Career Objective</h3>
             <p class="muted">
-              Motivated and detail-oriented Computer Science undergraduate with practical experience in software
-              development, database systems, and computer graphics.
+              Motivated and detail-oriented CSE undergraduate with experience in software development,
+              database systems, and computer graphics. Focused on learning and building secure, reliable applications.
             </p>
           </div>
           <div class="box glow-hover">
@@ -168,8 +171,8 @@
             <ul class="list">
               <li>Software development & GUI experience</li>
               <li>Web technologies & database design</li>
-              <li>Problem-solving through academic projects</li>
-              <li>Analytical and teamwork skills</li>
+              <li>Project-based problem solving</li>
+              <li>Strong teamwork & communication</li>
             </ul>
           </div>
         </div>
@@ -178,7 +181,7 @@
 
     <!-- EDUCATION -->
     <section id="education" class="section">
-      <div class="card shimmer-frame">
+      <div class="card shimmer-frame section-card">
         <h2 class="section-title">Education</h2>
         <div class="stack">
           <div class="edu glow-hover">
@@ -210,7 +213,7 @@
 
     <!-- SKILLS -->
     <section id="skills" class="section">
-      <div class="card shimmer-frame">
+      <div class="card shimmer-frame section-card">
         <h2 class="section-title">Skills</h2>
 
         <div class="grid-3">
@@ -249,118 +252,102 @@
 
     <!-- PROJECTS (Flip) -->
     <section id="projects" class="section">
-      <div class="card shimmer-frame">
+      <div class="card shimmer-frame section-card">
         <h2 class="section-title">Projects</h2>
 
         <div class="proj-grid">
-          <!-- Project 1 -->
-          <div class="flip-card glow-hover">
-            <div class="flip-inner">
-              <div class="flip-front">
+          <!-- NOTE: later you can replace each Show Code link with actual repo link -->
+
+          <div class="flip-card">
+            <div class="flip-inner shimmer-frame">
+              <div class="flip-front glow-hover">
                 <h3 class="proj-title">Bookshop Management System</h3>
-                <p class="muted">C# + SQL Server • Sales/Inventory/Employee • GUI</p>
+                <p class="muted">C# + SQL Server • Sales / Inventory / Employee • GUI</p>
               </div>
-              <div class="flip-back">
+              <div class="flip-back glow-hover">
                 <div class="flip-back-title">Bookshop Management System</div>
-                <a class="code-btn shimmer-frame" href="https://github.com/noman51" target="_blank" rel="noreferrer">
-                  Show Code
-                </a>
+                <a class="code-btn shimmer-frame" href="https://github.com/noman51" target="_blank" rel="noreferrer">Show Code</a>
               </div>
             </div>
           </div>
 
-          <!-- Project 2 -->
-          <div class="flip-card glow-hover">
-            <div class="flip-inner">
-              <div class="flip-front">
+          <div class="flip-card">
+            <div class="flip-inner shimmer-frame">
+              <div class="flip-front glow-hover">
                 <h3 class="proj-title">Travel Agency Management System</h3>
-                <p class="muted">Java GUI • OOP • Modular UI Navigation</p>
+                <p class="muted">Java GUI • OOP • Modular UI</p>
               </div>
-              <div class="flip-back">
+              <div class="flip-back glow-hover">
                 <div class="flip-back-title">Travel Agency Management System</div>
-                <a class="code-btn shimmer-frame" href="https://github.com/noman51" target="_blank" rel="noreferrer">
-                  Show Code
-                </a>
+                <a class="code-btn shimmer-frame" href="https://github.com/noman51" target="_blank" rel="noreferrer">Show Code</a>
               </div>
             </div>
           </div>
 
-          <!-- Project 3 -->
-          <div class="flip-card glow-hover">
-            <div class="flip-inner">
-              <div class="flip-front">
+          <div class="flip-card">
+            <div class="flip-inner shimmer-frame">
+              <div class="flip-front glow-hover">
                 <h3 class="proj-title">Computer Graphics Animated Scene</h3>
                 <p class="muted">OpenGL/GLUT • Animation • Transformations</p>
               </div>
-              <div class="flip-back">
+              <div class="flip-back glow-hover">
                 <div class="flip-back-title">Computer Graphics Animated Scene</div>
-                <a class="code-btn shimmer-frame" href="https://github.com/noman51" target="_blank" rel="noreferrer">
-                  Show Code
-                </a>
+                <a class="code-btn shimmer-frame" href="https://github.com/noman51" target="_blank" rel="noreferrer">Show Code</a>
               </div>
             </div>
           </div>
 
-          <!-- তুমি চাইলে আরও project add করবে (same format copy) -->
         </div>
       </div>
     </section>
 
-    <!-- CERTIFICATES (4 per row) -->
+    <!-- CERTIFICATES -->
     <section id="certificates" class="section">
-      <div class="card shimmer-frame">
+      <div class="card shimmer-frame section-card">
         <h2 class="section-title">Certificates</h2>
 
-        <!-- NOTE:
-          তুমি পরে photos folder/root এ রাখবে:
+        <!--
+          Put certificate photos inside photo/ folder:
           c1.jpg, c2.jpg, c3.jpg, c4.jpg ... (as you want)
+          If you haven’t added yet, images won’t show (normal).
         -->
-
         <div class="cert-grid">
-          <div class="cert-item glow-hover" data-img="c1.jpg" data-title="Certificate Title 1">
-            <div class="cert-thumb">
-              <img src="c1.jpg" alt="Certificate 1" />
-            </div>
+          <div class="cert-item glow-hover" data-img="photo/c1.jpg" data-title="Certificate Title 1">
+            <div class="cert-thumb"><img src="photo/c1.jpg" alt="Certificate 1"></div>
             <div class="cert-name">Certificate Title 1</div>
           </div>
 
-          <div class="cert-item glow-hover" data-img="c2.jpg" data-title="Certificate Title 2">
-            <div class="cert-thumb">
-              <img src="c2.jpg" alt="Certificate 2" />
-            </div>
+          <div class="cert-item glow-hover" data-img="photo/c2.jpg" data-title="Certificate Title 2">
+            <div class="cert-thumb"><img src="photo/c2.jpg" alt="Certificate 2"></div>
             <div class="cert-name">Certificate Title 2</div>
           </div>
 
-          <div class="cert-item glow-hover" data-img="c3.jpg" data-title="Certificate Title 3">
-            <div class="cert-thumb">
-              <img src="c3.jpg" alt="Certificate 3" />
-            </div>
+          <div class="cert-item glow-hover" data-img="photo/c3.jpg" data-title="Certificate Title 3">
+            <div class="cert-thumb"><img src="photo/c3.jpg" alt="Certificate 3"></div>
             <div class="cert-name">Certificate Title 3</div>
           </div>
 
-          <div class="cert-item glow-hover" data-img="c4.jpg" data-title="Certificate Title 4">
-            <div class="cert-thumb">
-              <img src="c4.jpg" alt="Certificate 4" />
-            </div>
+          <div class="cert-item glow-hover" data-img="photo/c4.jpg" data-title="Certificate Title 4">
+            <div class="cert-thumb"><img src="photo/c4.jpg" alt="Certificate 4"></div>
             <div class="cert-name">Certificate Title 4</div>
           </div>
         </div>
 
         <p class="muted cert-note">
-          * এখন তোমার কাছে c1.jpg.. নাই বলে image না পেলে broken দেখাবে। পরে file রাখলেই auto show হবে।
+          * Certificate images এখন না থাকলে broken দেখা যাবে—photo/c1.jpg.. দিয়ে file রাখলেই ঠিক হবে।
         </p>
       </div>
     </section>
 
     <!-- CONTACT -->
     <section id="contact" class="section">
-      <div class="card shimmer-frame">
+      <div class="card shimmer-frame section-card">
         <h2 class="section-title">Contact Info</h2>
 
         <div class="contact-grid">
           <div class="contact-box glow-hover">
             <div class="contact-row">
-              <img src="mail.png?v=1" alt="Mail" class="c-ico"/>
+              <img src="photo/mail.png" alt="Mail" class="c-ico"/>
               <div>
                 <div class="mini-label">Email</div>
                 <a class="mini-value" href="mailto:nomanridoy998@gmail.com">nomanridoy998@gmail.com</a>
@@ -368,18 +355,18 @@
             </div>
 
             <div class="contact-row">
-              <div class="c-dot"></div>
+              <img src="photo/whatsapp.png" alt="WhatsApp" class="c-ico"/>
               <div>
                 <div class="mini-label">Phone / WhatsApp</div>
                 <a class="mini-value" href="tel:+8801832856912">+880 1832-856912</a>
-                <div class="muted" style="margin-top:6px;">
+                <div style="margin-top:6px;">
                   <a class="mini-value" href="https://wa.me/8801832856912" target="_blank" rel="noreferrer">Open WhatsApp</a>
                 </div>
               </div>
             </div>
 
             <div class="contact-row">
-              <img src="github.png?v=1" alt="GitHub" class="c-ico"/>
+              <img src="photo/github.png" alt="GitHub" class="c-ico"/>
               <div>
                 <div class="mini-label">GitHub</div>
                 <a class="mini-value" href="https://github.com/noman51" target="_blank" rel="noreferrer">github.com/noman51</a>
@@ -387,7 +374,7 @@
             </div>
 
             <div class="contact-row">
-              <img src="linkedin.png?v=1" alt="LinkedIn" class="c-ico"/>
+              <img src="photo/linkedin.png" alt="LinkedIn" class="c-ico"/>
               <div>
                 <div class="mini-label">LinkedIn</div>
                 <a class="mini-value" href="https://www.linkedin.com/in/abdullah-al-n-950472137/" target="_blank" rel="noreferrer">
@@ -400,12 +387,12 @@
           <div class="contact-box glow-hover">
             <h3 class="box-title">Social Links</h3>
             <div class="social-row big">
-              <a class="social-btn shimmer-frame" href="https://www.facebook.com/share/1EMQPtMjmU/" target="_blank" rel="noreferrer"><img src="facebook.png?v=1" alt="Facebook"/></a>
-              <a class="social-btn shimmer-frame" href="https://www.instagram.com/ridoy.noman.5686?igsh=MXYzOWVlZTNnZTh5eA==" target="_blank" rel="noreferrer"><img src="instagram.png?v=1" alt="Instagram"/></a>
-              <a class="social-btn shimmer-frame" href="mailto:nomanridoy998@gmail.com" target="_blank" rel="noreferrer"><img src="mail.png?v=1" alt="Email"/></a>
-              <a class="social-btn shimmer-frame" href="https://github.com/noman51" target="_blank" rel="noreferrer"><img src="github.png?v=1" alt="GitHub"/></a>
-              <a class="social-btn shimmer-frame" href="https://www.linkedin.com/in/abdullah-al-n-950472137/" target="_blank" rel="noreferrer"><img src="linkedin.png?v=1" alt="LinkedIn"/></a>
-              <a class="social-btn shimmer-frame" href="https://wa.me/8801832856912" target="_blank" rel="noreferrer"><img src="whatsapp.png?v=1" alt="WhatsApp"/></a>
+              <a class="social-btn shimmer-frame" href="https://www.facebook.com/share/1EMQPtMjmU/" target="_blank" rel="noreferrer"><img src="photo/facebook.png" alt="Facebook"/></a>
+              <a class="social-btn shimmer-frame" href="https://www.instagram.com/ridoy.noman.5686?igsh=MXYzOWVlZTNnZTh5eA==" target="_blank" rel="noreferrer"><img src="photo/instagram.png" alt="Instagram"/></a>
+              <a class="social-btn shimmer-frame" href="mailto:nomanridoy998@gmail.com" target="_blank" rel="noreferrer"><img src="photo/mail.png" alt="Email"/></a>
+              <a class="social-btn shimmer-frame" href="https://github.com/noman51" target="_blank" rel="noreferrer"><img src="photo/github.png" alt="GitHub"/></a>
+              <a class="social-btn shimmer-frame" href="https://www.linkedin.com/in/abdullah-al-n-950472137/" target="_blank" rel="noreferrer"><img src="photo/linkedin.png" alt="LinkedIn"/></a>
+              <a class="social-btn shimmer-frame" href="https://wa.me/8801832856912" target="_blank" rel="noreferrer"><img src="photo/whatsapp.png" alt="WhatsApp"/></a>
             </div>
           </div>
         </div>
@@ -422,10 +409,10 @@
       <div class="modal-top">
         <div id="modalTitle" class="modal-title">Certificate</div>
         <button id="modalClose" class="icon-btn shimmer-frame" aria-label="Close">
-          <span class="theme-icon" aria-hidden="true" id="modalCloseIcon"></span>
+          <span id="modalCloseIcon" class="svg-ico" aria-hidden="true"></span>
         </button>
       </div>
-      <img id="modalImg" class="modal-img" src="" alt="Certificate preview"/>
+      <img id="modalImg" class="modal-img" src="" alt="Preview"/>
     </div>
   </div>
 
