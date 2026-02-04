@@ -277,4 +277,20 @@ function draw() {
         ctx.lineWidth = 1 * dpr;
         ctx.beginPath();
         ctx.moveTo(a.x, a.y);
-        ctx.lineTo(b.x,
+        ctx.lineTo(b.x, b.y);
+        ctx.stroke();
+      }
+    }
+  }
+
+  // dots
+  ctx.fillStyle = dotColor;
+  for (const p of points) {
+    ctx.beginPath();
+    ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+    ctx.fill();
+  }
+
+  requestAnimationFrame(draw);
+}
+draw();
